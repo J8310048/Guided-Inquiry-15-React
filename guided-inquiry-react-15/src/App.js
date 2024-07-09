@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import BasicInfo from "./BasicInfo";
-("use client");
 
 class App extends Component {
   constructor(props) {
