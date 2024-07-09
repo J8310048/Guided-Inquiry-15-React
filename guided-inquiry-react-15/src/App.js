@@ -2,13 +2,6 @@ import React, { Component } from "react";
 import BasicInfo from "./BasicInfo";
 ("use client");
 
-import { useState } from "react";
-import "@/styles/styles.css"; // This imports the CSS file
-
-const ConditionalStyledComponent = () => {
-  const [isActive, setIsActive] = useState(false);
-};
-
 class App extends Component {
   constructor(props) {
     super(props);
