@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+
+  .Joshua {
+    margin: 0 auto;
+
+    #header {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    p {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+  }
+}

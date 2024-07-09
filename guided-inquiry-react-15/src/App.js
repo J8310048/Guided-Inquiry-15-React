@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BasicInfo from "./BasicInfo";
+import "./styles/styles.scss";
 
 class App extends Component {
   constructor(props) {
@@ -30,8 +31,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Joshua</h1>
+      <div class="Joshua">
+        <h1 id="header">Joshua</h1>
         <p>December 15th, 1997</p>
         <p>Height: 5'8"</p>
         <p>Hispanic</p>
