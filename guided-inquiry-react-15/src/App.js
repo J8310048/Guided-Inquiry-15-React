@@ -1,35 +1,40 @@
 import React, { Component } from "react";
 import BasicInfo from "./BasicInfo";
+("use client");
+
+import { useState } from "react";
+import "@/styles/styles.css"; // This imports the CSS file
+
+const ConditionalStyledComponent = () => {
+  const [isActive, setIsActive] = useState(false);
+};
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      person: [
+      people: [
         {
-          name: "John Doe",
-          number: "123-456-7890",
-          dateOfBirth: "January 1, 1990"
+          name: "Clark Kent",
+          occupation: "Superman",
+          height: "6'3",
+          dateOfBirth: "January 1, 1938",
         },
         {
-          name: "Jane Smith",
-          number: "987-654-3210",
-          dateOfBirth: "February 2, 1985"
-        }
-      ]
+          name: "Bruce Wayne",
+          occupation: "Batman",
+          height: "6'3",
+          dateOfBirth: "January 1, 1939",
+        },
+        {
+          name: "Barry Allen",
+          occupation: "The Flash",
+          height: "6'0",
+          dateOfBirth: "January 1, 1939",
+        },
+      ],
     };
   }
-
-  render() {
-    return (
-      <div>
-        {this.state.people.map((person, index) => (
-          <BasicInfo key={index} person={person} />
-        ))}
-      </div>
-    );
-  }
-}
 
   render() {
     return (
@@ -40,12 +45,13 @@ class App extends Component {
         <p>Hispanic</p>
         <p>loves to play video games</p>
         <p>practices the guitar sometimes</p>
+        <div>
+          {this.state.people.map((person, index) => (
+            <BasicInfo key={index} person={person} />
+          ))}
+        </div>
       </div>
     );
-  }
-
-  render() {
-    return <BasicInfo person={this.state.person} />;
   }
 }
 
